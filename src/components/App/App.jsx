@@ -17,8 +17,6 @@ export const App = () => {
 
 
   useEffect(() => {
-    // console.log(!searchQuery);
-    
     if (!searchQuery) {
       return
     };
@@ -51,7 +49,6 @@ export const App = () => {
   }, [searchQuery, page]);
 
   const handleSubmit = searchQuery => {
-    // console.log(searchQuery);
     if (searchQuery.toLowerCase().trim() === "") {
       return Notiflix.Notify.failure("Unfortunately, there are no more images. You've reached the last page with search results.");
     }
