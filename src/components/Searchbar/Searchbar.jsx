@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import PropTypes from "prop-types";
 import css from "./Searchbar.module.css";
 
-export const Searchbar = ({ handleSubmit }) => {
+export const Searchbar = ({ onSubmit }) => {
     const handleFormSubmit = evt => {
         evt.preventDefault();
 
@@ -16,7 +16,7 @@ export const Searchbar = ({ handleSubmit }) => {
 
         value === ''
             ? Notiflix.Notify.failure("Please try again. Enter a search term in the search field.")
-            : handleSubmit(value.toLowerCase().trim());
+            : onSubmit(value.toLowerCase().trim());
         
         evt.currentTarget.reset();
     };
@@ -42,5 +42,5 @@ export const Searchbar = ({ handleSubmit }) => {
 };
 
 Searchbar.propTypes = {
-    handleSubmit: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired,
 };
