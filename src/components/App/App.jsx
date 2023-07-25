@@ -15,6 +15,8 @@ export const App = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [modalImage, setModalImage] = useState(0);
 
+  console.log(loadMore);
+  console.log(error);
 
   useEffect(() => {
     if (!searchQuery) {
