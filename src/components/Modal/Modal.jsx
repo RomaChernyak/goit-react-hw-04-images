@@ -9,6 +9,7 @@ export const Modal = ({ closeModal, modalImage }) => {
                 closeModal();
             };
         };
+        
         window.addEventListener('keydown', handleKeyDown);
 
         return () => {
